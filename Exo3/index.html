@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partie 7 Exercice 3</title>
+</head>
+
+<body>
+    <h1>Exercice 3</h1>
+    <p>Refaire le premier exercice en utilisant une fonction fléchée.</p>
+    <div>
+        <form action="">
+            <input type="number" id="firstNumber"> x
+            <input type="number" id="secondNumber"> =
+            <input type="number" id="answer" readonly>
+            <button id="myButton" type="button">Résultat :</button>
+        </form>
+    </div>
+    <script>
+        let firstNumber = document.getElementById("firstNumber");
+        let secondNumber = document.getElementById("secondNumber");
+        let answer = document.getElementById("answer");
+        let button = document.getElementById("myButton");
+
+        // function numMultiplication(firstNumber, secondNumber) {
+        //    return answer.value = (firstNumber * secondNumber);
+        // }
+
+        let numMultiplication = (firstNumber, secondNumber) => answer.value = (firstNumber * secondNumber);
+
+        button.addEventListener("click", function () {
+            numMultiplication(firstNumber.value, secondNumber.value);
+        })
+
+        const array1 = ['a', 'b', 'c'];
+
+        // array1.forEach(element => console.log(element));
+
+        // expected output: "a"
+        // expected output: "b"
+        // expected output: "c"
+
+        array1.forEach(function(element){
+            return console.log(element);
+        })
+    </script>
+</body>
+
+</html>

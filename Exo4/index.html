@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 4</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <h1>Exercice 4</h1>
+  <p>Dans le fichier html fourni, au clic sur l'image, augmenter sa taille. Utiliser une fonction fléchée. </p>
+  <img src="assets/img/la-nuit-etoilee.jpg" alt="La nuit étoilée - V. VAN GOGH" />
+  <script>
+    let img = document.querySelector("img")
+    img.addEventListener("click", () => {img.style.width = "100%"; img.style.border = "2px solid black";})
+
+    // img.addEventListener("click", function(){
+    //   return img.style.width = "100%";
+    // })
+  </script>
+</body>
+
+</html>

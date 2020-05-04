@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partie 7 Exercice 1</title>
+</head>
+
+<body>
+    <h1>Exercice 1</h1>
+    <p>Écrire une fonction qui prend 2 nombres en paramètres et qui retourne le résultat de leur multiplication.
+
+        Créer un formulaire permettant d'entrer deux nombres. Au clic sur un bouton, lancer votre fonction.</p>
+    <div>
+        <form action="">
+            <input type="number" id="firstNumber"> x
+            <input type="number" id="secondNumber"> =
+            <input type="number" id="answer" readonly="readonly">
+            <button id="myButton" type="button">Résultat :</button>
+        </form>
+    </div>
+    <script>
+        let firstNumber = document.getElementById("firstNumber");
+        let secondNumber = document.getElementById("secondNumber");
+        let answer = document.getElementById("answer");
+        let button = document.getElementById("myButton");
+
+        function numMultiplication(){
+            answer.value = (firstNumber.value * secondNumber.value).toString();
+        }
+
+        button.addEventListener("click" , numMultiplication);
+    </script>
+</body>
+
+</html>
